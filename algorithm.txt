@@ -1,1 +1,33 @@
-THINK before you code...
+1. import Scanner and Decimal format
+2.make a new scanner called in
+3. make a new decimal format called moneyFmt
+4. get input for package using "Which package do you have"
+5. get input for data using "How much data did you use"
+6. initialize the variables valid, price, data_limit, price_extra, and hasCoupon
+7. if package.equals("purple")
+    a. price = 99.95
+    b. data_limit = 0
+    c. price_extra = 0
+8. else if package.equals("blue")
+    a. price = 70
+    b. data_limit = 4
+    c. price_extra = 10
+9. else if package.equals("green")
+    a. get input for coupon using "Do you have a coupon?"
+    b. set coupon to lowercase and strip
+    c. if coupon.equals("yes")
+        i. hasCoupon = true
+    d. else if coupon.equals("no")
+        i. hasCoupon = false
+    e. price = 49.99
+    f. data_limit = 2
+    g. price_extra = 15
+10. else
+    a. output "Invalid package name"
+    b. valid = false
+11. if valid
+    a. if data_used > data_limit
+        i. price += (data_used - data_limit) * price_extra
+        ii. if package.equals("green") && hasCoupon ** price >= 75
+            a. price -= 20
+12. output "You owe, " + moneyFmt.format(price)
